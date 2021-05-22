@@ -1,8 +1,9 @@
 ﻿import discord
+import os
 from discord.ext import commands
 import asyncio
 
-token = 'ODI3ODU1NzIyODc1MTkxMzQ2.YGhGuQ.AOVS27Anm41cnEpEg62_nJXvo9s'
+
 bot = commands.Bot(command_prefix='#')
 bot.remove_command('help')
 bad_words = ['nigga', 'niger','fag','faggot','negro','#bantestforbot']
@@ -63,4 +64,4 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
 
 
-bot.run(token)
+bot.run(str(os.environ.get('BOT_TOKEN')))
