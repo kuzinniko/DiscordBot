@@ -14,7 +14,7 @@ async def on_ready():
     print("connected")
     # выставляем статус бота
     await bot.change_presence(status=discord.Status.idle,
-                              activity=discord.Game('BATTLEFRONT 2'))
+                              activity=discord.Game('Your Mom'))
 
 # + фильтр чата
 @bot.event
